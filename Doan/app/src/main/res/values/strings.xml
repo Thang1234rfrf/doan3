@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MUSIC</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="options_array">
+        <item>Pop</item>
+        <item>Nhạc Trẻ</item>
+        <item>Remix</item>
+        <item>Rock</item>
+        <item>Đồng quê</item>
+        <item>Acoustic</item>
+        <item>Khác</item>
+        <!-- Thêm các tùy chọn khác vào đây -->
+    </string-array>
+</resources>

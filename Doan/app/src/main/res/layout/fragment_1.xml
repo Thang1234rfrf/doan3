@@ -1,0 +1,404 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#212121"
+    android:layout_height="match_parent"
+
+   >
+
+      <FrameLayout
+          android:id="@+id/f1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          >
+
+      <LinearLayout
+
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:paddingStart="10dp"
+          android:paddingEnd="10dp"
+          android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/sr_pr"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                  <AutoCompleteTextView
+                      android:id="@+id/search_bar"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_marginEnd="5dp"
+                      android:layout_weight="0.9"
+                      android:background="@drawable/rounded_rectangle"
+                      android:hint="Search"
+                      android:imeOptions="actionDone"
+                      android:inputType="text"
+                      android:maxLines="1"
+                      android:paddingStart="12dp"
+                      android:paddingEnd="12dp"
+                      android:textColor="#fbfbfb"
+                      android:textColorHint="#80fbfbfb" />
+
+                  <RelativeLayout
+                      android:id="@+id/search_mode_pr"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_marginStart="5dp"
+                      android:layout_weight="0.13"
+                      android:background="@drawable/rounded_rectangle">
+
+                        <ImageView
+                            android:id="@+id/search_mode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/mode_music" />
+
+                  </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/slider"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                  <com.denzcoskun.imageslider.ImageSlider
+                      android:layout_width="match_parent"
+                      android:layout_height="210dp"
+                      android:id="@+id/imageSlider"
+                      app:iss_auto_cycle="true"
+                      app:iss_delay="0"
+                      app:iss_placeholder="@android:color/darker_gray"
+                      app:iss_error_image="@android:color/darker_gray"
+                      app:iss_corner_radius="100"
+                      app:iss_selected_dot="@drawable/default_selected_dot"
+                      app:iss_unselected_dot="@drawable/default_unselected_dot"
+                      app:iss_period="1000"
+                      tools:ignore="MissingConstraints" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/img_click"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/slider"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/custom_radius"
+
+                >
+
+                  <LinearLayout
+                      android:layout_marginTop="20dp"
+                      android:id="@+id/tb_1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/nhacmoi"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/new_music"
+                            android:scaleType="fitXY"
+                            app:riv_border_color="#474444"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/theloai"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/chillhop_vol2_nl"
+                            app:riv_border_color="#474444"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:src="@drawable/top50"
+                            android:scaleType="fitXY"
+                            app:riv_border_color="#474444"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:src="@drawable/trending"
+                            android:scaleType="fitXY"
+                            app:riv_border_color="#474444"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false" />
+                  </LinearLayout>
+
+                  <androidx.constraintlayout.widget.ConstraintLayout
+                      android:id="@+id/tb_2"
+                      android:layout_width="match_parent"
+                      android:layout_height="48dp"
+                      android:layout_below="@id/tb_1"
+                      android:gravity="center">
+
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="23dp"
+                            android:fontFamily="@font/roboto_font"
+                            android:text="Nhạc Mới"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/textView7"
+                            app:layout_constraintHorizontal_bias="0.357"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="23dp"
+                            android:fontFamily="@font/roboto_font"
+                            android:text="Thể Loại"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/textView8"
+                            app:layout_constraintStart_toEndOf="@+id/textView6"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="23dp"
+                            android:fontFamily="@font/roboto_font"
+                            android:text="Top 50"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/textView9"
+                            app:layout_constraintStart_toEndOf="@+id/textView7"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginBottom="23dp"
+                            android:text="Bảng xếp hạng"
+                            android:fontFamily="@font/roboto_font"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView8"
+                            app:layout_constraintTop_toTopOf="parent" />
+                  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical">
+
+                  <TextView
+                      android:id="@+id/textView10"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:layout_weight="0.1"
+                      android:fontFamily="@font/roboto_font"
+                      android:text="Bài Hát Nổi Bật"
+                      android:textColor="@color/white"
+                      android:textSize="27sp" />
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:id="@+id/rview1"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:layout_marginStart="5dp"
+                      android:layout_marginEnd="5dp"
+                      android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="514dp"
+                android:background="@drawable/custom_background"
+                android:layout_marginBottom="70dp"
+                android:orientation="vertical">
+
+                  <TextView
+                      android:id="@+id/textView3"
+                      android:layout_width="match_parent"
+                      android:layout_height="39dp"
+                      android:textColor="@color/white"
+                      android:fontFamily="@font/roboto_font"
+                      android:textSize="27sp"
+                      android:layout_marginTop="5dp"
+                      android:layout_marginStart="10dp"
+                      android:text="Bảng Xếp Hạng-Chart" />
+
+                  <androidx.constraintlayout.widget.ConstraintLayout
+                      android:id="@+id/okok"
+                      android:layout_width="match_parent"
+                      android:layout_height="210dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/imageView12"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/chillhop_vol2_nl"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView14"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.497"
+                            app:riv_border_color="#915656"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false"
+                            tools:visibility="visible" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/imageView13"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginEnd="30dp"
+                            android:src="@drawable/chillhop_vol2_nl"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView15"
+                            app:layout_constraintTop_toTopOf="@+id/imageView17"
+                            app:layout_constraintVertical_bias="0.225"
+                            app:riv_border_color="#915656"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/imageView14"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="56dp"
+                            android:layout_marginBottom="90dp"
+                            android:src="@drawable/chillhop_vol2_nl"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView13"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            app:riv_border_color="#915656"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/imageView15"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="60dp"
+                            android:src="@drawable/chillhop_vol2_nl"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView16"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.161"
+                            app:riv_border_color="#915656"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/imageView16"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="130dp"
+                            android:src="@drawable/chillhop_vol2_nl"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.592"
+                            app:riv_border_color="#915656"
+                            app:riv_border_width="2dp"
+                            app:riv_corner_radius="8dp"
+                            app:riv_oval="false" />
+
+                        <ImageView
+                            android:id="@+id/imageView17"
+                            android:layout_width="389dp"
+                            android:layout_height="188dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/favpng_bar_chart_vector_graphics_illustration" />
+
+
+                  </androidx.constraintlayout.widget.ConstraintLayout>
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:id="@+id/rview3"
+                      android:layout_width="match_parent"
+                      android:layout_height="135dp"
+                      android:layout_weight="1" />
+
+                  <androidx.appcompat.widget.AppCompatButton
+                      android:id="@+id/button2"
+                      android:layout_width="183dp"
+                      android:layout_height="22dp"
+                      android:layout_gravity="center"
+                      android:background="@drawable/custom_background"
+                      android:textColor="@color/white"
+                      android:alpha="0.5"
+                      android:layout_marginTop="20dp"
+                      android:layout_marginBottom="10dp"
+                      android:text="xem thêm" />
+
+
+            </LinearLayout>
+
+
+
+
+
+      </LinearLayout>
+      </FrameLayout>
+
+</ScrollView>
